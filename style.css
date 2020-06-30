@@ -79,12 +79,9 @@ th {
 }
 
 td,
-th {
+th, 
+tr {
 	padding: 3px;
 	width: 30px;
 	height: 35px;
-}
-
-th {
-	background-color: #464646;
 }
