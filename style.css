@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/*lessons-02*/
 .bg-dark {
 	background-color: black;
 	padding: 2% 12%;
@@ -64,12 +66,13 @@ hr {
 }
 
 
+/*lessons-02 end*/
+
 /*lessons-03*/
 
 table {
 	width: 70%;
 	border-collapse: collapse;
-	border-spacing: 0
 }
 
 table,
@@ -84,3 +87,4 @@ tr {
 	padding: 3px;
 	height: 35px;
 }
+/*lessons-03 end*/
