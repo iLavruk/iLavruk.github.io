@@ -75,7 +75,7 @@ table {
 table,
 td,
 th {
-	border: 1px solid #595959;
+	border: 1px solid #000;
 }
 
 td,
@@ -86,5 +86,5 @@ th {
 }
 
 th {
-	background-color: #7accee;
+	background-color: #464646;
 }
