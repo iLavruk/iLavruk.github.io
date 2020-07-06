@@ -7,8 +7,7 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 h1, h2 {
-	color: white;
-	padding: 10px
+	color: white;]
 }
 nav{
 	background-color: red;
@@ -20,17 +19,23 @@ header{
 }
 div {
 	background-color: greenyellow;
-	height: 400px;
+	width: 70%;
+	float: left;
 }
 aside{
 	background-color: green;
 	width: 30%;
 	float: right;
+}
+div, aside {
 	height: 400px;
 }
 footer{
 	background-color: brown;
 	height: 60px;
+}
+nav, header, footer{
+	width: 100%;
 }
 nav, header, div, aside, footer{	
 	display: flex;
