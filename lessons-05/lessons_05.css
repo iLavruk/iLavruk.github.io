@@ -1,1 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+	margin: 0 auto;
+}
+body{
+	padding: 0 10%;
+	font-family: 'Montserrat', sans-serif;
+}
+h1, h2 {
+	color: white;
+	padding: 10px
+}
+nav{
+	background-color: red;
+	height: 60px;
+}
+header{
+	background-color: blue;
+	height: 80px;
+}
+div {
+	background-color: greenyellow;
+	height: 400px;
+}
+aside{
+	background-color: green;
+	width: 30%;
+	float: right;
+	height: 400px;
+}
+footer{
+	background-color: brown;
+	height: 60px;
+}
+nav, header, div, aside, footer{	
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
