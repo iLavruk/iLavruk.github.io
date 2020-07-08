@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+	margin: 0 auto;
+}
+body{
+	background-image: url(images/bg-img.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.bg-board{
+	margin-top: -100px;
+	transform: perspective(1100px) rotate3d(10,0,0,35deg);
+	width: 860px;
+	height: 890px;
+	background-color: #3a2213;
+}
+.chessboard{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	top: 50px;
+	left: 0;
+	right: 0;
+}
+.cell, .cell-letter{
+	display: table-cell;
+	text-align: center;
+}
+.cell{
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+.cell-letter{
+	position: relative;
+	left: 20px;
+	width: 93px;
+	vertical-align: middle;
+}
+.left, .letter, .right{	
+	color: wheat;
+}
+.left, .right{	
+    border: 1px solid #67563e;
+}
+.right {
+    transform: rotate(180deg);
+}
+.letter{
+    font-size: 16px;
+	font-weight: 900;
+    text-align: center;
+    height: 20px;
+	margin: -35px 0 20px;
+    border: 1px solid #67563e;
+}
+.top{
+	margin-bottom: 0px;
+    transform: rotate(180deg);
+    direction: rtl;
+}
+.bottom{
+	margin-top: 0px;
+}
+.number {
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 900;
+}
+.black{
+	background-color: #5d4728;
+}
+.white{
+	background-color: white;
+}
+.pawn-img, .rook-img, .knight-img, .bishop-img, .king-img, .queen-img{	
+	-webkit-filter: drop-shadow(5px 3px 5px rgba(0,0,0,0.5));
+	filter: drop-shadow(5px 3px 5px rgba(0,0,0,0.5));
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.rook-img, .bishop-img, .knight-img, .bishop-img, .king-img, .queen-img{   
+	transform: perspective(400px) rotateX(-35deg) rotateY(0deg) rotateZ(0deg);
+    top: -50px;
+}
+.rook-img, .knight-img{
+	height: 150px;
+}
+.pawn-img{   
+	transform: perspective(500px) rotateX(-40deg) rotateY(0deg) rotateZ(0deg);
+    top: -25px;
+	height: 130px;
+}
+.bishop-img{
+	height: 170px;
+	top: -65px;
+}
+.king-img, .queen-img{	
+	height: 190px;
+	top: -80px;
+}
