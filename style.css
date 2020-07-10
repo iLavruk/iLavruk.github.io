@@ -1,90 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-/*lessons-02*/
-.bg-dark {
-	background-color: black;
-	padding: 2% 12%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+* {
+	margin: 0 auto;
 	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
-
-h1,
-h2 {
-	text-align: center;
-	color: #7fc0de;
-	letter-spacing: 0.1em;
+body {
+	background-color: #282828;
 }
-
-p {
-	color: #c2d2da;
-	font-size: 18px;
-	line-height: 1.5em;
-	text-align: justify;
+.main-block{
+	height: 10vh;
+	display: flex;
+	align-items: center;
 }
-
-nav {
-	text-align: center;
-	padding: 20px 0;
+.main-block .main-title{
+	align-items: flex-end;
 }
-
-a {
-	color: #fcffff;
+.container {
+	display: flex;
+	justify-content: space-between;
+	height: 45vh;
+	overflow: hidden;
+}
+.block {
+	position: relative;
+	box-shadow: inset 0px 0px 50px 10px rgba(2, 0, 36, 0.2);
+	transition-duration: .5s;	
+}
+#block-1 {
+	background: linear-gradient(0deg, rgba(21, 181, 34, 1) 0%, rgba(101, 237, 128, 1) 100%);
+}
+#block-2 {
+	background: linear-gradient(0deg, rgba(195, 82, 34, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+#block-3 {
+	background: linear-gradient(0deg, rgba(200, 12, 44, 1) 0%, rgba(222, 116, 134, 1) 100%);
+}
+#block-4 {
+	background: linear-gradient(0deg, rgba(175, 138, 43, 1) 0%, rgba(253, 255, 55, 1) 100%);
+}
+#block-5 {
+	background: linear-gradient(180deg, rgba(251,230,87,1) 0%, rgba(215,98,30,1) 100%);
+}
+#block-6 {
+	background: linear-gradient(180deg, rgba(115,116,246,1) 0%, rgba(13,19,126,1) 100%);
+}
+#block-7 {
+	background: linear-gradient(0deg, rgba(195, 82, 34, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+#block-8 {
+	background: linear-gradient(180deg, rgba(112,251,87,1) 0%, rgba(30,192,215,1) 100%);
+}
+#block-9 {
+	background: linear-gradient(180deg, rgba(198,251,87,1) 0%, rgba(77,215,30,1) 100%);
+}
+#block-10 {
+	background: linear-gradient(180deg, rgba(251,87,87,1) 0%, rgba(153,39,39,1) 100%);;
+}
+#block-1, #block-2, #block-3, #block-4, #block-5, #block-6, #block-7, #block-8, #block-9, #block-10{
+	transition-duration: .5s;	
+}
+#block-1:hover,
+#block-2:hover,
+#block-3:hover,
+#block-4:hover,
+#block-5:hover,
+#block-6:hover,
+#block-7:hover,
+#block-8:hover,
+#block-9:hover,
+#block-10:hover  {
+	margin-bottom: 100px;
+}
+.block a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+}
+.block a .main-title:hover {
+	color: #282828;
+}
+.container .block .main-title{
+	transition-duration: .5s;	
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	padding: 0 20px 0 0px;
+}
+.main-title {
+	font-weight: 800;
+	font-size: 32px;
 	text-decoration: none;
 }
-
-a:hover {
-	color: #04abfa;
+.sub-block {
+	display: flex;
+	padding: 20px 20px;
+	position: relative;
+	justify-content: space-between;
 }
+.container .block .sub-block,.container .block .sub-date {
+	align-self: flex-end;
 
-hr {
-	border: none;
-	background-color: #a4c4c5;
-	height: 1px;
 }
-
-.navigation-link {
-	padding: 15px;
+.description, .sub-date{
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+	line-height: 28px;
+}
+.sub-date{
+	color: #787878;
+}
+@media (min-width: 768){
+	.main-title {
+		font-size: 36px;
+	}
+}
+@media (min-width: 992px){
+	.main-title {
+		font-size: 42px;
+	}
+}
+@media (min-width: 1200px){
+	.main-title {
+		font-size: 46px;
+	}
+}
+@media (min-width: 1800px){
+	.main-title {
+		font-size: 56px;
+	}
+}
+/*icons*/
+.fab{
 	font-size: 20px;
-	color: #fcffff;
-	text-transform: uppercase;
-	text-decoration: none;
+	transition-duration: .3s;	
+	padding: 0 20px;
 }
-
-.center-text {
-	text-align: center;
-}
-
-.next-text {
-	color: #038dce;
-}
-
-.w-100 {
-	max-width: 100%;
-}
-
-.img-right {
-	transform: rotate(180deg);
-}
-
-
-/*lessons-02 end*/
-
-/*lessons-03*/
-
-table {
-	width: 70%;
-	border-collapse: collapse;
-}
-
-table,
-td,
-th {
-	border: 1px solid #000;
-}
-
-td,
-th, 
-tr {
-	padding: 3px;
-	height: 35px;
-}
-/*lessons-03 end*/
+.fab:hover{
+	color: #767676;
+}	

@@ -1,0 +1,52 @@
+
+.contact-form{
+	width: 520px;
+	max-height: 775px;
+	margin: 0 auto; 
+	background-color: #F6F8F9;
+}
+
+section > div > .sub-description{
+	color: #848383;
+	line-height: 30px;	
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],input[type=tel], input[type=email],textarea {
+	font-family: 'Raleway';
+	background-color: #F6F8F9;
+	color: #A5A5A5;
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #D2D2D2; /* Gray border */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  input[type=text]:focus,input[type=tel]:focus, input[type=email]:focus,textarea:focus{
+	background-color: #F6F8F9;
+	border-radius: 0px;
+	border: 1px solid #aaa7a7; /* Gray border */
+	outline: none;
+  } 
+  textarea{
+	  max-height: 170px;
+	  margin-bottom: 30px !important;
+	  color: #A5A5A5;
+  }
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+	text-transform: uppercase;
+	font-family: 'Raleway';
+	width: 100%;
+	background-color: #5BAD47;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
