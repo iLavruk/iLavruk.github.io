@@ -18,6 +18,5 @@ function chessBoard() {
             cell = !cell;
         }
     }
-
 }
 chessBoard();
