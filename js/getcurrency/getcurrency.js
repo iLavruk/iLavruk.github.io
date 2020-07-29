@@ -47,13 +47,13 @@ Highcharts.chart('container', {
         }
     },
 
-    title: {
-        text: 'Daily sessions at www.highcharts.com'
-    },
+    // title: {
+    //     text: 'Daily sessions at www.highcharts.com'
+    // },
 
-    subtitle: {
-        text: 'Source: Google Analytics'
-    },
+    // subtitle: {
+    //     text: 'Source: Google Analytics'
+    // },
 
     xAxis: {
         tickInterval: 7 * 24 * 3600 * 1000, // one week
