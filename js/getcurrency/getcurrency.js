@@ -1,5 +1,6 @@
 var btnGet = document.getElementById("btnGet");
 var result = document.getElementById("result");
+let chartData = [], dates = [], currencies = [];
 btnGet.addEventListener("click", getCurrencyValue);
 
 function dateToStringNBU(dateObj) {
@@ -22,13 +23,32 @@ function getCurrencyValue() {
     var diff = (eDate - sDate) / ONEDAY;
     var cDate;
     let i = 0;
-    while(i <= diff) {
+    while (i <= diff) {
         cDate = new Date(sDate.valueOf() + (i * ONEDAY));
         i++;
         var URI = `https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=${currency}&date=${dateToStringNBU(cDate)}&json`;
-        console.log(URI);
+        // console.log(URI);
+        fetch(URI)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                //   console.log(data);
+                chartData.push({ exchangedate: new Date(data[0].exchangedate.split(".").reverse().join(".")), rate: data[0].rate });
+            });
     }
-    
+    //console.log(chartData);
+    setTimeout(() => {
+        chartData.sort((firstElement, secondElement) => {
+            return firstElement.exchangedate - secondElement.exchangedate;
+        });
+        //  console.log(chartData);
+        chartData.forEach((elementDate) => {
+            dates.push(elementDate.exchangedate);
+            currencies.push(elementDate.rate);
+        })
+        console.log(dates, currencies);
+    }, 2000);
 }
 
 // highcharts
@@ -56,7 +76,7 @@ Highcharts.chart('container', {
     // },
 
     xAxis: {
-        tickInterval: 7 * 24 * 3600 * 1000, // one week
+        tickInterval: 48 * 60 * 60 * 1000, // two days
         tickWidth: 0,
         gridLineWidth: 1,
         labels: {
@@ -130,12 +150,7 @@ Highcharts.chart('container', {
     },
 
     series: [{
-        name: 'All sessions',
-        lineWidth: 4,
-        marker: {
-            radius: 4
-        }
-    }, {
-        name: 'New users'
+        name: 'Installation',
+        date:currencies
     }]
 });
